@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="wsell">
+    <output-path>$PROJECT_DIR$/out/artifacts/wsell</output-path>
+    <root id="archive" name="wsell.war">
+      <element id="module-output" name="wsell" />
+      <element id="dir-copy" path="$PROJECT_DIR$" />
+    </root>
+  </artifact>
+</component>
