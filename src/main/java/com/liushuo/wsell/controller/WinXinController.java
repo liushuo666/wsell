@@ -73,11 +73,18 @@ public class WinXinController {
     }
     @RequestMapping(value = "setMenu",method = RequestMethod.GET)
     public void setMenu(){
-
+        getAccessToken();
+        System.out.println(NomalKeys.ACCESS_TOKEN);
+      //  String url = String.format("");
     }
-
+    /**
+     * 获取普通的access_token*/
     public void getAccessToken(){
-
+        String url = String.format("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s",
+                NomalKeys.APPID,NomalKeys.APPSECRET);
+        log.info(url);
+        JSONObject jsonObject = CommonUtil.httpsRequest(url, "GET", null);
+        NomalKeys.ACCESS_TOKEN = jsonObject.getString("access_token");
     }
 
     /**
@@ -109,8 +116,8 @@ public class WinXinController {
         userInfo.setCity(jsonObject.getString("city"));
         userInfo.setProvince(jsonObject.getString("province"));
         userInfo.setCountry(jsonObject.getString("country"));
-        userInfo.setHeadimgurl(jsonObject.getString("headimgurl"));
         userInfo.setPrivilege(jsonObject.getString("privilege"));
+        userInfo.setHeadimgurl(jsonObject.getString("headimgurl"));
         log.info("获取到了用户信息");
         return  userInfo;
     }
