@@ -1,4 +1,4 @@
-package com.liushuo.wsell.dataobject;
+package com.liushuo.wsell.dataobject.wxobject;
 
 /**
  * Create by liushuo on 2017/12/19.
