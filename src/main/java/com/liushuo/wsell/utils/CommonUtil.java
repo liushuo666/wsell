@@ -32,8 +32,8 @@ public class CommonUtil {
             // http协议传输
             HttpURLConnection httpUrlConn = (HttpURLConnection) url.openConnection();
 
-            httpUrlConn.setDoOutput(true);
             httpUrlConn.setDoInput(true);
+            httpUrlConn.setDoOutput(true);
             httpUrlConn.setUseCaches(false);
             // 设置请求方式（GET/POST）
             httpUrlConn.setRequestMethod(requestMethod);

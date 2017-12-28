@@ -185,17 +185,30 @@ public class WinXinController {
     public List<SubButton> secondMenu(){
         List<SubButton> subButtonList = new ArrayList<>();
         SubButton subButton = new SubButton();
-        subButton.setType("view");
-        subButton.setName("深圳旅游攻略");
-        subButton.setUrl("https://www.baidu.com/");
+
+        subButton.setType("pic_sysphoto");
+        subButton.setName("拍照发图");
+        subButton.setKey("rselfmenu_1_0");
 
         SubButton subButton1 = new SubButton();
-        subButton1.setType("view");
-        subButton1.setName("酒店住宿");
-        subButton1.setUrl("https://www.baidu.com/");
+        subButton1.setType("pic_photo_or_album");
+        subButton1.setName("拍照或相册");
+        subButton1.setKey("rselfmenu_2_0");
+
+        SubButton subButton2 = new SubButton();
+        subButton2.setType("pic_weixin");
+        subButton2.setName("打开相册");
+        subButton2.setKey("rselfmenu_3_0");
+
+        SubButton subButton3 = new SubButton();
+        subButton3.setType("location_select");
+        subButton3.setName("发送位置");
+        subButton3.setKey("location_2_0");
 
         subButtonList.add(subButton);
         subButtonList.add(subButton1);
+        subButtonList.add(subButton2);
+        subButtonList.add(subButton3);
         return subButtonList;
     }
 }

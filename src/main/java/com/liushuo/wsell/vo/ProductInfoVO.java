@@ -25,5 +25,7 @@ public class ProductInfoVO {
 
     @JsonProperty("icon")
     private String productIcon;
+
+
 }
 
